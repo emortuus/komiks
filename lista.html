@@ -15,11 +15,13 @@
 <script src="lista.js" defer></script>
 </head>
 
-<body>
+<body class="lista-strona">
 
-<div class="banner-left"></div>
-<div class="banner-right"></div>
+<!-- Banery boczne -->
+<div class="baner-lewy"></div>
+<div class="baner-prawy"></div>
 
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Comics</a>
@@ -31,14 +33,20 @@
   </div>
 </nav>
 
+<!-- Główny kontener -->
 <div class="container">
   <div class="card p-4">
     <h2>Lista zakupów</h2>
 
-    <!-- Inputy dla nowego produktu i ceny -->
+    <!-- Inputy -->
     <input id="nowyProdukt" class="form-control mb-2" placeholder="Nazwa produktu">
     <input id="nowaCena" class="form-control mb-2" placeholder="Cena produktu (np. 39.99)">
-    <input id="filtr" class="form-control mb-3" placeholder="Filtruj listę">
+    
+    <!-- Input filtrujący + przycisk w jednej linii -->
+    <div class="d-flex mb-3 align-items-stretch">
+      <input id="filtrTekst" class="form-control me-2" placeholder="Wpisz frazę do filtrowania">
+      <button id="filtrBtn" class="btn btn-custom">Filtruj</button>
+    </div>
 
     <!-- Przyciski do obsługi listy -->
     <div class="btn-group flex-wrap mb-3">
@@ -50,14 +58,20 @@
       <button id="przywroc" class="btn btn-custom">Przywróć listę</button>
       <button id="kolory" class="btn btn-custom">Pokoloruj co drugi</button>
       <button id="sortuj" class="btn btn-custom">Sortuj A–Z</button>
-      <button id="platnosc" class="btn btn-custom">Gotowe do zapłaty</button>
     </div>
 
     <!-- Lista zakupów -->
-    <ul id="lista" class="list-group"></ul>
+    <ul id="lista" class="list-group mb-3"></ul>
 
-    <!-- Suma -->
-    <li id="suma" class="list-group-item active mt-3">Suma: 0 zł</li>
+    <!-- Przycisk sumowania i kupna -->
+    <div class="d-flex justify-content-end mb-2">
+      <button id="sumuj" class="btn btn-custom me-2">Sumuj zakupy</button>
+      <button id="kup" class="btn btn-custom">Kup</button>
+    </div>
+
+    <!-- Wynik sumy -->
+    <li id="wynik" class="list-group-item mt-2 active">Tutaj pojawi się suma zakupów</li>
+
   </div>
 </div>
 
