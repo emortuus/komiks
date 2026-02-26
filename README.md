@@ -1,0 +1,3 @@
+# Komiks
+
+Nowa wersja projektu.
