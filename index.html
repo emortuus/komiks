@@ -1,75 +1,45 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<title>Lista Zakupów</title>
- 
-<!--ICONA -->
-<link rel="icon" href="data:image/svg+xml,
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-<text y='.9em' font-size='90'>🛒</text>
-</svg>">
- 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
- 
-<!-- Font Awesome (ikony w statystykach) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
- 
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
- 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- 
-<!-- jQuery UI -->
-<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
- 
-<!-- Nasz JS -->
-<script src="script.js" defer></script>
- 
+    <meta charset="UTF-8">
+    <title>Lista Zakupów</title>
+    <link rel="icon" href="data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'> <text y='.9em' font-size='90'>🛒</text> </svg>">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
- 
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-7 col-md-9 col-12">
-      <div class="main-card">
- 
-        <h2>Lista Zakupów</h2>
- 
-        <input type="text" id="productInput" class="form-control" placeholder="Dodaj produkt...">
-        <input type="text" id="filterInput" class="form-control" placeholder="Filtruj...">
- 
-        <div class="d-flex flex-wrap gap-2 justify-content-center mb-3">
-          <button class="btn btn-custom" id="addBtn">Dodaj</button>
-          <button class="btn btn-custom" id="addStartBtn">Na początek</button>
-          <button class="btn btn-custom" id="addEndBtn">Na koniec</button>
-          <button class="btn btn-custom" id="removeLastBtn">Usuń ostatni</button>
-          <button class="btn btn-custom" id="removeDoneBtn">Usuń kupione</button>
-          <button class="btn btn-custom" id="clearBtn">Wyczyść</button>
-          <button class="btn btn-custom" id="restoreBtn">Przywróć</button>
-          <button class="btn btn-custom" id="sortBtn">Sortuj A-Z</button>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7 col-md-9 col-12">
+                <div class="main-card my-5">
+                    <h2>Lista Zakupów</h2>
+                    <input type="text" id="productInput" class="form-control" placeholder="Dodaj produkt...">
+                    <input type="text" id="filterInput" class="form-control" placeholder="Filtruj listę...">
+                    <div class="d-flex flex-wrap gap-2 justify-content-center mb-3">
+                        <button class="btn btn-custom" id="addBtn">Dodaj</button>
+                        <button class="btn btn-custom" id="addStartBtn">Na początek</button>
+                        <button class="btn btn-custom" id="addEndBtn">Na koniec</button>
+                        <button class="btn btn-custom" id="removeLastBtn">Usuń ostatni</button>
+                        <button class="btn btn-custom" id="removeDoneBtn">Usuń kupione</button>
+                        <button class="btn btn-custom" id="clearBtn">Wyczyść</button>
+                        <button class="btn btn-custom" id="restoreBtn">Przywróć</button>
+                        <button class="btn btn-custom" id="sortBtn">Sortuj A-Z</button>
+                        <button class="btn btn-custom" id="colorEvenBtn">Pokoloruj co drugi</button>
+                    </div>
+                    <ul id="shoppingList" class="list-group mb-3"></ul>
+                    <div class="stats text-center">
+                        <div><i class="fa-solid fa-list"></i> Wszystkie: <span id="totalCount">0</span></div>
+                        <div><i class="fa-solid fa-check-circle"></i> Kupione: <span id="doneCount">0</span></div>
+                        <div><i class="fa-solid fa-cart-shopping"></i> Zostało: <span id="todoCount">0</span></div>
+                    </div>
+                </div>
+            </div>
         </div>
- 
-        <div class="d-flex justify-content-center gap-3 mb-3">
-          <button class="btn btn-outline-secondary btn-sm filter-btn" data-filter="all">Wszystkie</button>
-          <button class="btn btn-outline-secondary btn-sm filter-btn" data-filter="done">Kupione</button>
-          <button class="btn btn-outline-secondary btn-sm filter-btn" data-filter="todo">Niekupione</button>
-        </div>
- 
-        <ul id="shoppingList" class="list-group mb-3"></ul>
- 
-        <div class="stats text-center">
-          <div><i class="fa-solid fa-list"></i> Wszystkie: <span id="totalCount">0</span></div>
-          <div><i class="fa-solid fa-check-circle"></i> Kupione: <span id="doneCount">0</span></div>
-          <div><i class="fa-solid fa-cart-shopping"></i> Zostało: <span id="todoCount">0</span></div>
-        </div>
- 
-      </div>
     </div>
-  </div>
-</div>
- 
 </body>
 </html>
