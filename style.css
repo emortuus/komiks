@@ -93,3 +93,41 @@ h2 {
     visibility: visible !important;
     border-radius: 10px;
 }
+
+/* Zmiany dla małych ekranów (telefony) */
+@media (max-width: 768px) {
+
+    .main-card {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .list-group-item {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .btn-custom {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .stats {
+        font-size: 14px;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .side-panel {
+        padding: 15px;
+        gap: 8px;
+    }
+}
