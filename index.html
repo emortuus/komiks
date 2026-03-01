@@ -1,20 +1,29 @@
-<!DOCTYPE html>
-<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>Lista Zakupów</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- ikonki (fa-cart-shopping, fa-plus itd.) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- jQuery – podstawowa biblioteka -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI – dodatkowe funkcje (np. sortable – przeciąganie elementów) -->
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <!-- jQuery UI Touch Punch – umożliwia przeciąganie na telefonie (obsługa dotyku) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- JavaScript -->
     <script src="script.js" defer></script>
 </head>
-
 <body>
 
 <div class="container py-5">
@@ -26,7 +35,7 @@
                 <div class="row g-4">
 
                     <!-- LEWA STRONA -->
-                    <div class="col-8 list-column">
+                    <div class="col-12 col-md-8 list-column">
 
                         <h2>
                             <i class="fa-solid fa-cart-shopping"></i>
@@ -35,6 +44,7 @@
 
                         <input type="text" id="productInput" class="form-control mb-2"
                                placeholder="Dodaj produkt...">
+
                         <input type="text" id="filterInput" class="form-control mb-3"
                                placeholder="Filtruj listę...">
 
@@ -51,7 +61,7 @@
                     </div>
 
                     <!-- PRAWA STRONA -->
-                    <div class="col-4 panel-column">
+                    <div class="col-12 col-md-4 panel-column">
 
                         <div class="side-panel">
 
